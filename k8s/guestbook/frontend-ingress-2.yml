@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: frontend-ingress-01
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+  - hosts:
+    - nikola.kratoss.club
+    secretName: nikola-kratos 
+  rules:
+  - host: nikola.kratoss.club
+    http:
+      paths:
+      - path: /bat
+        backend:
+          serviceName: frontend 
+          servicePort: 80
+      - path: /ball
+        backend:
+          serviceName: frontend
+          servicePort: 80

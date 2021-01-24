@@ -1,0 +1,1 @@
+aws iam attach-role-policy --policy-arn arn:aws:iam::469621685690:policy/Amazon_EBS_CSI_Driver --role-name eksctl-eks-argus-nodegroup-nodegr-NodeInstanceRole-AVC51MBFGG6
